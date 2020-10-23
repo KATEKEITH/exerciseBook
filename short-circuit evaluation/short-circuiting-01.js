@@ -1,6 +1,7 @@
-// && 연산자로 코드 단축시키기
-// 특정 값이 유효할때에만
-// 어떤 값을 조회하는 작업을 해야 할 때 매우 유용합니다.
+// getName의 파라미터에 제대로된 객체가 주어지지 않으면?
+// animal 객체가 undefined 이기 때문에, undefined 에서 name 값을 조회 할 수 없어서 이렇게 에러가 발생
+
+// before
 const dog = {
   name: "멍멍이",
 };
@@ -10,4 +11,17 @@ function getName(animal) {
 }
 
 const name = getName();
-console.log("name", name);
+
+// after
+// const dog = {
+//   name: "멍멍이",
+// };
+
+// function getName(animal) {
+//   if (animal) {
+//     return animal.name;
+//   }
+//   return undefined;
+// }
+
+// const name = getName();
