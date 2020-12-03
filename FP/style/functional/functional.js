@@ -20,7 +20,6 @@ const startCase = (str) => {
 };
 
 const changePartStartCase = (str) => {
-  console.log("str", str, str.split(" "));
   return str.split(" ").map(startCase).join(" ");
 };
 
